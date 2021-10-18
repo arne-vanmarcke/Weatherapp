@@ -1,0 +1,75 @@
+:root{
+    --glass:rgba(255, 255, 255, .15);
+}
+.hello {
+    color: red;
+}
+
+body,html {
+    height: 100%;
+    margin: 0;
+}
+
+.imgLogo{
+    background-image: url('./assets/icon_small.png');
+    border: none;
+}
+
+.glass{
+    background-color: var(--glass);  
+    backdrop-filter: blur(5px);
+}
+
+.menu{
+    width: 80%;
+    height: 60%;
+    justify-self: center;
+}
+
+.menuImg{
+    width: 200px;
+    height: 200px;
+}
+
+.search{
+    justify-self: center;
+}
+.searchInput{
+    height: 50px;
+    border-radius: 15px 0 0 15px;
+    color: white;
+    border: 1px solid white;
+    border-right: none;
+    background: transparent;
+}
+
+.searchSubmit{
+    height: 50px;
+    width: 50px;
+    border-radius: 0 15px 15px 0;
+    color: white;
+    background: transparent;
+    border-left: none;
+    text-shadow: none;
+}
+
+@media only screen and (max-width: 449px) {
+    body {
+        height: 100%;
+        margin: 0;
+        background-image: url('./assets/backMobile.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+@media only screen and (min-width: 450px) {
+    body {
+        height: 100%;
+        margin: 0;
+        background-image: url('./assets/backPC.jpg');
+        background-position: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

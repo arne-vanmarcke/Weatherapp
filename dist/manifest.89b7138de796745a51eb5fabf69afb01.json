@@ -1,0 +1,27 @@
+{
+  "icons": [
+    {
+      "src": "./icon_1024x1024.d5025b4637c5eae431ee77c2ea282715.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icon_1024x1024.d5025b4637c5eae431ee77c2ea282715.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_512x512.2ea793f60b2102859f09785724837564.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "name": "My web app",
+  "short_name": "A PWA",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "My awesome Progressive Web App! no idea",
+  "background_color": "#ffffff"
+}
