@@ -21,9 +21,10 @@ body,html {
 }
 
 .menu{
-    width: 80%;
+    width: 100%;
     height: 60%;
     justify-self: center;
+    color: white;
 }
 
 .menuImg{
@@ -32,15 +33,21 @@ body,html {
 }
 
 .search{
-    justify-self: center;
+    display: flex;
+    justify-content: center;
 }
 .searchInput{
     height: 50px;
+    width: 50%;
     border-radius: 15px 0 0 15px;
     color: white;
     border: 1px solid white;
     border-right: none;
     background: transparent;
+    padding: 0 0 0 15px;
+}
+.searchInput:focus{
+    outline: none;
 }
 
 .searchSubmit{
@@ -52,6 +59,7 @@ body,html {
     background: transparent;
     border-left: none;
     text-shadow: none;
+    padding: 0;
 }
 
 @media only screen and (max-width: 449px) {
