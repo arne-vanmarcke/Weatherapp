@@ -46,6 +46,7 @@ body,html {
 .searchSubmit{
     height: 50px;
     width: 50px;
+    border: 1px solid white;
     border-radius: 0 15px 15px 0;
     color: white;
     background: transparent;
