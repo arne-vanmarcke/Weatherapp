@@ -94,7 +94,7 @@ module.exports={
         svg.setAttribute("fill","currentColor");
         svg.setAttribute("class","bi bi-search")
         svg.setAttribute("width","50");
-        svg.setAttribute("height","50")
+       svg.setAttribute("height","50")
         form.className="search";
         input.type="text";
         input.className="searchInput";
