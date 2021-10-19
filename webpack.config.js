@@ -16,7 +16,7 @@ module.exports = {
             Util: 'exports-loader?Util!bootstrap/js/dist/util'
         }),
         new HtmlWebpackPlugin({
-        title: 'Wheaterapp',
+        title: 'Weatherapp',
         favicon: './src/assets/icon_small.png'
         }),
         new WorkboxPlugin.InjectManifest({
@@ -25,7 +25,7 @@ module.exports = {
         new WebpackPwaManifest({
             name: 'My web app',
             short_name: 'A PWA',
-            description: 'My awesome Progressive Web App! no idea',
+            description: 'My awesome Progressive Web App!',
             background_color: '#ffffff',
             crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
             publicPath: './',

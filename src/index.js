@@ -138,6 +138,6 @@ function Container(){
 const container=Container();
 document.body.appendChild(design.navBar());
 document.body.appendChild(container);
-let menu = design.card("http://openweathermap.org/img/wn/02d@2x.png","Wheaterapp","Wheaterapp with Openwheatermap API: https://openweathermap.org/api.","menu")
+let menu = design.card("http://openweathermap.org/img/wn/02d@2x.png","Weatherapp","Weatherapp with Openweathermap API: https://openweathermap.org/api.","menu")
 container.appendChild(design.searchbar());
 container.appendChild(menu);
