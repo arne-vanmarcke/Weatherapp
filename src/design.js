@@ -93,8 +93,8 @@ module.exports={
         svg.setAttribute("viewbox","0 0 16 16");
         svg.setAttribute("fill","currentColor");
         svg.setAttribute("class","bi bi-search")
-        svg.setAttribute("width","50");
-       svg.setAttribute("height","50")
+        svg.setAttribute("width","16");
+        svg.setAttribute("height","16")
         form.className="search";
         input.type="text";
         input.className="searchInput";
