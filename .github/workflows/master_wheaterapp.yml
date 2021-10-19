@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'Wheaterapp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8B52BB2C802249868D58CDD21E0B1FF7 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E687DD26D38B4915B74146CD9DBB9F12 }}
           package: .
