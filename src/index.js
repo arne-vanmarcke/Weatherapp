@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import './style.css';
 const design = require('./design')
+const api= require('./openweather')
 
 const applicationServerPublicKey ="BKOeW7lXW6Efbra-_YMygVxCX7eGDAOhuaRGCpHUg9BlfMmJCjuZEnGs24vEgCagNxj16QNXUdnSnbpxXDRZZmE"
 var isSubscribed = false;
@@ -135,9 +136,42 @@ function Container(){
   container.className="container-md";
   return container;
 }
+
 const container=Container();
 document.body.appendChild(design.navBar());
 document.body.appendChild(container);
-let menu = design.card("http://openweathermap.org/img/wn/02d@2x.png","Weatherapp","Weatherapp with Openweathermap API: https://openweathermap.org/api.","menu")
-container.appendChild(design.searchbar());
-container.appendChild(menu);
+var elem_arr=design.searchbar()
+container.appendChild(elem_arr[0]);
+elem_arr[2].onclick=(e)=>{
+  let card=document.getElementsByClassName("card")
+  console.log(card)
+  if(card.length!=0)
+    card[0].remove()
+  api.get_wheater(elem_arr[1].value)
+  .then(res=>{
+    console.log(res)
+    let menu = design.card(`http://openweathermap.org/img/wn/${res.weather[0].icon}@2x.png`,res.weather[0].description,res.name,)
+    container.appendChild(menu)
+  })
+}
+
+function showPosition(position) {
+  const geo={lat: position.coords.latitude, long: position.coords.longitude}
+  api.get_wheater_geo(geo.lat,geo.long)
+  .then(res=>{
+    console.log(res)
+    let menu = design.card(`http://openweathermap.org/img/wn/${res.weather[0].icon}@2x.png`,res.weather[0].description,res.name,)
+    container.appendChild(menu)
+  })
+}
+
+window.addEventListener('load',()=>{
+  if (navigator.geolocation) {
+    let geo=navigator.geolocation.getCurrentPosition(showPosition);
+    console.log(geo)
+  } else {
+    console.log("Geolocation is not supported by this browser.")
+  }
+})
+// let menu = design.card("http://openweathermap.org/img/wn/02d@2x.png","Weatherapp","Weatherapp with Openweathermap API: https://openweathermap.org/api.","menu")
+// container.appendChild(menu);

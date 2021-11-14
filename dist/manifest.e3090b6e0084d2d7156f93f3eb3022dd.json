@@ -1,27 +1,28 @@
 {
   "icons": [
     {
-      "src": "./icon_1024x1024.d5025b4637c5eae431ee77c2ea282715.png",
+      "src": "./icon_1024x1024.44d7c06128cb33b3ac9293ea63c54973.png",
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "./icon_1024x1024.d5025b4637c5eae431ee77c2ea282715.png",
+      "src": "./icon_1024x1024.44d7c06128cb33b3ac9293ea63c54973.png",
       "sizes": "1024x1024",
       "type": "image/png"
     },
     {
-      "src": "./icon_512x512.2ea793f60b2102859f09785724837564.png",
+      "src": "./icon_512x512.fd475603a2ddf4c84e8cca11f46a3cee.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
   "name": "My web app",
-  "short_name": "A PWA",
+  "short_name": "Wheaterapp",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": ".",
   "description": "My awesome Progressive Web App!",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
 }

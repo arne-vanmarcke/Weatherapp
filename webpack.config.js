@@ -24,22 +24,23 @@ module.exports = {
         }),
         new WebpackPwaManifest({
             name: 'My web app',
-            short_name: 'A PWA',
+            short_name: 'Wheaterapp',
             description: 'My awesome Progressive Web App!',
             background_color: '#ffffff',
-            crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
+            crossorigin: 'use-credentials',
             publicPath: './',
+            theme_color:'#ffffff',
             icons: [
               {
-                src: path.resolve('./src/assets/logo-512.png'),
-                sizes: [512] // multiple sizes
+                src: path.resolve('./src/assets/logo-512-of.png'),
+                size: '512x512'
               },
               {
-                src: path.resolve('./src/assets/maskable-1024.png'),
-                size: '1024x1024' // you can also use the specifications pattern
+                src: path.resolve('./src/assets/logo-1024.png'),
+                size: '1024x1024'
               },
               {
-                src: path.resolve('./src/assets/maskable-1024.png'),
+                src: path.resolve('./src/assets/logo-1024.png'),
                 size: '1024x1024',
                 purpose: 'maskable'
               }

@@ -1,4 +1,5 @@
 const { Button } = require("bootstrap");
+const api= require('./openweather')
 
 module.exports={
     navBar:()=>{
@@ -23,7 +24,7 @@ module.exports={
         //img.alt="logo";
         img.width="45";
         img.height="45";
-        img.src="http://www-cdr.stanford.edu/~petrie/blank.gif";
+        img.src="./111687c516503ff104b2.png";
         img.className="imgLogo";
         a.appendChild(img);
         divC.appendChild(a);
@@ -101,13 +102,14 @@ module.exports={
         input.placeholder="Search for city...";
         submit.type="button";
         submit.className="searchSubmit"
-        submit.onclick=(e)=>{
-            form.submit();
-        }
+        // submit.onclick=(e)=>{
+        //     // form.submit();
+        //     api.get_wheater(input.value)
+        // }
         svg.appendChild(path);
         submit.appendChild(svg);
         form.appendChild(input);
         form.appendChild(submit);
-        return form;
+        return [form,input,submit];
     },
 }
